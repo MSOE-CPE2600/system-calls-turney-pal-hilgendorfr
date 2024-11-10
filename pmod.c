@@ -4,6 +4,7 @@
  * Section: CPE 2600 121
  * File: pmod.c
  * Date: 11/5/2024
+ * Updated: 11/10/2024
  *****************************************************************************/
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -30,6 +31,7 @@ int main(int argc, char* argv[])
     }
 
     // goodbye :)
+    free(ts);
     printf("goodbye\n");
     return 0;
 }

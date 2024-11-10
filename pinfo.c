@@ -4,6 +4,7 @@
  * Section: CPE 2600 121
  * File: pinfo.c
  * Date: 11/5/2024
+ * Updated: 11/10/2024
  *****************************************************************************/
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -66,5 +67,6 @@ int main(int argc, char* argv[])
         printf("Scheduler Priority: %d\n", priority);
         printf("Scheduling Method: %s\n", schedMethod);
     }
+    
     return 0;
 }
