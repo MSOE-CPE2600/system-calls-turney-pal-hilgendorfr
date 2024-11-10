@@ -40,12 +40,12 @@ int main(int argc, char* argv[])
     // print hostname. This is the network name.
     printf("Hostname: %s\n", hostBuffer);
     // get system name, release, version, and hardware type
-    struct utsname buffer;
-    if(uname(&buffer) == 0) {
-        printf("System Name: %s\n", buffer.sysname);
-        printf("Release: %s\n", buffer.release);
-        printf("Version: %s\n", buffer.version);
-        printf("Hardware Architecture: %s\n", buffer.machine);
+    struct utsname *buffer = malloc(sizeof(struct utsname));
+    if(uname(buffer) == 0) {
+        printf("System Name: %s\n", buffer->sysname);
+        printf("Release: %s\n", buffer->release);
+        printf("Version: %s\n", buffer->version);
+        printf("Hardware Architecture: %s\n", buffer->machine);
     }
 
     // get the number of CPUs in the system
